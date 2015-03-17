@@ -5,7 +5,7 @@ Order placement data for Barker Bob's Burger Bar's Bigger, Better Burger Bonana
 
 
 <!-- An order identifies the customer, order type burgers, and anything special -->
-<!ELEMENT order (customer, delivery?, burger+, special)>
+<!ELEMENT order (customer, delivery?, burger+, special?)>
 
 <!-- customers are identified by their name -->
 <!ELEMENT customer (#PCDATA)>
@@ -35,14 +35,14 @@ burger customization
 <!-- patty can be 1 of 5 types, can be named explicitly -->
 <!ELEMENT patty (#PCDATA)>
 <!ATTLIST patty
-    type (beef|pork|turky|bison|vege) "beef"
+    type (beef|pork|turkey|bison|vege) "beef"
 >
 
 <!-- cheese options.  1 can be top and the other be bottom -->
 <!ELEMENT cheeses EMPTY>
 <!ATTLIST cheeses
-    top (american|swiss|jack|blue|gruyere|goulda|aged|goat|brie) #IMPLIED
-    bottom (american|swiss|jack|blue|gruyere|goulda|aged|goat|brie) #IMPLIED
+    top (american|swiss|jack|blue|gruyere|gouda|aged|goat|brie) #IMPLIED
+    bottom (american|swiss|jack|blue|gruyere|gouda|aged|goat|brie) #IMPLIED
 >
 
 <!-- toppings.  each are handled individually -->
